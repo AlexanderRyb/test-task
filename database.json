@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Apple Mac",
+      "count": "1",
+      "weight": "200",
+      "image": "/images/appleMac.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Artline gaming PC",
+      "count": "1",
+      "weight": "200",
+      "image": "/images/artline_gaming.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Redmi book",
+      "count": "1",
+      "weight": "200",
+      "image": "/images/miRedmiBook.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Nokia phone",
+      "count": "1",
+      "weight": "200",
+      "image": "/images/nokia.jpg"
+    },
+
+    {
+      "id": 5,
+      "name": " samsung",
+      "count": "1",
+      "weight": "200",
+      "image": "/images/samsu.jpg"
+    }
+  ]
+}
