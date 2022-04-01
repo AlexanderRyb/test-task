@@ -2,22 +2,48 @@ import React from 'react'
 import "./styles.css";
 
 
-export default function Container () {
-  const getData = async()=>{
+export default class Container extends React.Component {
 
-    const res = await fetch("http://localhost:3001/products")
-    const data = await res.json()
-    console.log(data)
-    return data
-    
+
+  constructor(props){
+    super(props)
+    this.state = {
+      items: [],
+      data: []
+    }
   }
 
-  return (
-   <div>
-     <h2>test</h2>
-     <button onClick={getData}>get data</button>
-   </div>
-  )
-}
 
-  
+  componentDidMount(){
+    fetch(
+      "http://localhost:3001/products"
+    )
+    .then((res) => res.json())
+    .then((json) => {
+      this.setState({
+        data: json
+      })
+    })
+  }
+
+  render() {
+    let text = JSON.stringify(this.state.data)
+    let data = this.state.data
+
+    return (
+      <div>
+     <h2>{text}</h2>
+     <button >get data</button>
+     <p>
+       {
+         data.map((item)=> (
+           <div key={item.id}>
+             {item.name}
+           </div>
+         ))
+       }
+     </p>
+   </div>
+      )
+  }
+}
