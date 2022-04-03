@@ -7,8 +7,7 @@ export default class Container extends React.Component {
 
   constructor(props){
     super(props)
-    this.state = {
-      items: [],
+    this.state = {      
       data: []
     }
   }
@@ -27,22 +26,31 @@ export default class Container extends React.Component {
   }
 
   render() {
-    let text = JSON.stringify(this.state.data)
+   // let text = JSON.stringify(this.state.data)
     let data = this.state.data
 
     return (
-      <div>
-     <h2>{text}</h2>
-     <button >get data</button>
-     <p>
-       {
+      <div id='container'>
+        <div id='control-panel'>
+        <button id='add-product-button'>Add product</button>
+
+        </div>
+    
+    <div id='items-container'>
+    {
          data.map((item)=> (
-           <div key={item.id}>
+           <div className='item' key={item.id}>
+             <div className='item-name'>
              {item.name}
+
+             </div>
+             <img src= {item.image} alt="item preview" />
            </div>
          ))
        }
-     </p>
+     
+    </div>
+    
    </div>
       )
   }
