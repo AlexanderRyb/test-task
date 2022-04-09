@@ -28,13 +28,17 @@
       "weight": "200",
       "image": "/images/nokia.jpg"
     },
-
     {
       "id": 5,
       "name": "Samsung TV",
       "count": "1",
       "weight": "200",
       "image": "/images/samsu.jpg"
+    },
+    {
+      "name": "ljk",
+      "weight": "200",
+      "id": 6
     }
   ]
 }

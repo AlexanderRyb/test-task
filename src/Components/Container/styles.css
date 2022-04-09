@@ -15,7 +15,43 @@
     top: 100px;
     left: 50px;
     background-color: white;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.close-window-button{
+    width: fit-content;
+    margin-left: auto;
+    font-size: large;
+    height: 30px;
+}
+.remove-button{
+    height: 40px;
+}
+.edit-button{
+    height: 40px;
+}
+.confirm-button{
+margin-left: auto;
+margin-top: auto;
 
+height: 30px;
+}
+.cancel-button{
+height: 30px;
+margin-top: auto;
+
+
+}
+.add-item-modal{
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    border: 1px solid black;
+    position: relative;
+    left: 50px;
+    top: 100px;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 #control-panel{
     width: 100%;
@@ -57,6 +93,17 @@ img{
     height: 50px;
 }
 
+h1{
+    width: 100%;
+    font-size: 20px;
+    margin-top: 0;
+    margin-left: 5px
+}
+input{
+    width: 90%;
+    margin: 0 auto;
+    height: 30px;
+}
 
 .visible{
     display: flex;
