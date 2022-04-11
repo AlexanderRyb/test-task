@@ -15,6 +15,16 @@ export class Container extends React.Component {
       nameInputValue: "",
     };
   }
+  removeItem(item){
+    var http = new XMLHttpRequest()
+   var url = 'http://localhost:3001/products/'+item.id
+   http.open('DELETE', url, true)
+   http.send()
+   this.setState({
+     modalIsOpen: false
+   })
+
+  }
   openAddModal() {
     this.setState({
       addModalIsOpen: true,
@@ -36,7 +46,7 @@ export class Container extends React.Component {
         <div>{item.name}</div>
         <div>Weight: {item.weight}</div>
         <div>Count:{item.count}</div>
-        <button className="remove-button">remove</button>
+        <button className="remove-button" onClick={()=> this.removeItem(item)}>remove</button>
         <button className="edit-button">edit</button>
       </div>
     );
@@ -62,7 +72,6 @@ export class Container extends React.Component {
     })
   }
   addProduct() {
-    console.log(this.state.nameInputValue);
    var http = new XMLHttpRequest()
    var url = 'http://localhost:3001/products'
    http.open('POST', url, true)
@@ -70,6 +79,7 @@ export class Container extends React.Component {
    http.send(JSON.stringify({name: this.state.nameInputValue, weight: "200"}))
    let data = this.state.data;
    console.log(data)
+   this.setState({state: data})
 
    this.closeSecondModal()
    

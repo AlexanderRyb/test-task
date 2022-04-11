@@ -8,13 +8,6 @@
       "image": "/images/appleMac.jpg"
     },
     {
-      "id": 2,
-      "name": "Artline gaming PC",
-      "count": "1",
-      "weight": "200",
-      "image": "/images/artline_gaming.jpg"
-    },
-    {
       "id": 3,
       "name": "Redmi book",
       "count": "1",
@@ -36,9 +29,24 @@
       "image": "/images/samsu.jpg"
     },
     {
-      "name": "ljk",
+      "name": "lkjjkl",
       "weight": "200",
       "id": 6
+    },
+    {
+      "name": "kjghk",
+      "weight": "200",
+      "id": 7
+    },
+    {
+      "name": "okay",
+      "weight": "200",
+      "id": 8
+    },
+    {
+      "name": "j",
+      "weight": "200",
+      "id": 9
     }
   ]
 }
